@@ -1,0 +1,11 @@
+type Visit = 
+ record {
+   timestamp: Time;
+   userAgent: text;
+ };
+type Time = int;
+service : {
+  getTotalVisits: () -> (nat) query;
+  getVisits: () -> (vec Visit) query;
+  logVisit: (text) -> ();
+}
